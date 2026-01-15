@@ -1,0 +1,32 @@
+{
+    "name": "minimovies/app",
+    "description": "Mini Movies - PHP + Bootstrap movie browsing app",
+    "type": "project",
+    "require": {
+        "php": ">=8.1"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^1.10",
+        "squizlabs/php_codesniffer": "^3.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        },
+        "files": [
+            "src/Helpers/functions.php"
+        ]
+    },
+    "scripts": {
+        "lint": "phpcs",
+        "lint:fix": "phpcbf",
+        "analyze": "phpstan analyse",
+        "check": [
+            "@lint",
+            "@analyze"
+        ]
+    },
+    "config": {
+        "sort-packages": true
+    }
+}

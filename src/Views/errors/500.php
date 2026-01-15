@@ -1,0 +1,27 @@
+<?php
+
+declare(strict_types=1);
+
+http_response_code(500);
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>500 - Server Error | Mini Movies</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body class="bg-light d-flex align-items-center min-vh-100">
+    <div class="container text-center py-5">
+        <i class="bi bi-exclamation-triangle text-danger" style="font-size: 5rem;"></i>
+        <h1 class="display-1 text-muted mt-3">500</h1>
+        <h2 class="mb-4">Server Error</h2>
+        <p class="text-muted mb-4">Something went wrong on our end. Please try again later.</p>
+        <a href="/movies" class="btn btn-primary">
+            <i class="bi bi-arrow-left me-2"></i>Back to Movies
+        </a>
+    </div>
+</body>
+</html>

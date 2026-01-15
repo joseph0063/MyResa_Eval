@@ -1,0 +1,17 @@
+parameters:
+    level: 6
+    paths:
+        - src
+        - public
+        - config
+    excludePaths:
+        - vendor
+    phpVersion: 80100
+    reportUnmatchedIgnoredErrors: false
+    treatPhpDocTypesAsCertain: false
+    
+    # Ignore some common issues in plain PHP apps
+    ignoreErrors:
+        - '#Variable \$_SESSION might not be defined#'
+        - '#Variable \$_GET might not be defined#'
+        - '#Variable \$_POST might not be defined#'
