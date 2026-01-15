@@ -61,25 +61,40 @@ Open http://localhost:8000 in your browser.
 | Admin | admin@test.com  | password123 |
 | User  | user@test.com   | password123 |
 
-## Admin Rule
+## User Roles & Features
+
+### Guest (Not Logged In)
+
+Guests can:
+- Browse the movie catalog
+- Search movies by title
+- Filter movies by genre
+- Sort movies by rating, year, or title
+- View movie details (poster, description, rating)
+- Register for a new account
+- Login to an existing account
+
+### Registered User
+
+Registered users have all guest features, plus:
+- **Favorites:** Add or remove movies from personal favorites list
+- **Profile:** View personal profile information
+- **Edit Profile:** Update display name
+- **Logout:** End session securely
+
+### Administrator
+
+Administrators have all registered user features, plus:
+- **Movie Management:** Access `/admin/movies` dashboard
+- **Create Movies:** Add new movies to the catalog
+- **Edit Movies:** Modify existing movie information
+- **Delete Movies:** Remove movies from the catalog
+
+#### Admin Rule
 
 **The first registered user automatically becomes an administrator.**
 
 When you register a new account and the users table is empty, your account will be assigned `is_admin = 1`. All subsequent users will be regular users.
-
-Admin users can:
-- Access `/admin/movies` to manage movies
-- Create, edit, and delete movies
-
-## Features
-
-- **User Authentication:** Register, login, logout with session-based auth
-- **User Profile:** View profile info, edit profile, and manage favorite movies
-- **Movie Browsing:** Search, filter by genre, sort by rating/year/title, pagination
-- **Movie Details:** View full movie information with poster and description
-- **Favorites:** Add/remove movies to favorites (logged-in users)
-- **Admin CRUD:** Full movie management for administrators (create, edit, delete)
-- **Error Pages:** Custom styled 403, 404, and 500 error pages
 
 ## Security
 
